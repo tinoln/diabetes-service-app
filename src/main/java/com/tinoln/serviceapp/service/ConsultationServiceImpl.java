@@ -20,6 +20,7 @@ class ConsultationServiceImpl implements ConsultationService {
 
     private ConsultationRepository consultationRepository;
 
+    private static BigDecimal bmivalue;
     static BigDecimal rangeBMI(BigDecimal bmi) {
         return bmi;
     }
@@ -28,16 +29,19 @@ class ConsultationServiceImpl implements ConsultationService {
 
         BigDecimal bmi = weight.divide((height.multiply(height)));
         if (bmi.intValue() < 18.5) {
-            rangeBMI(bmi)
+            bmivalue = rangeBMI(bmi);
             return "Underweight";
         }
         else if (bmi.intValue() < 25) {
+            rangeBMI(bmi);
             return "Normal";
         }
         else if (bmi.intValue() < 30) {
+            rangeBMI(bmi);
             return "Overweight";
         }
         else {
+            rangeBMI(bmi);
             return "Obese";
         }
     }
@@ -52,8 +56,8 @@ class ConsultationServiceImpl implements ConsultationService {
         consultation.setWeight(consultation.getWeight());
         consultation.setHeight(consultation.getHeight());
 
-        consultation.setBmiRange(rangeBMI(consultation.getWeight(), consultation.getHeight()));
-        consultation.setBmiCoverage(categoryBMI(rangeBMI(consultation.getWeight()));
+        consultation.setBmiRange(rangeBMI(bmivalue));
+        consultation.setBmiCategory(categoryBMI(consultation.getWeight(), consultation.getHeight()));
         consultation.setMessage(consultation.getMessage());
 
         return consultationRepository.save(consultation);

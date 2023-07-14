@@ -49,7 +49,7 @@ public class Consultation {
 	 protected BigDecimal height;
 	 @NumberFormat
 	 protected BigDecimal bmiRange;
-	 protected String bmiCoverage;
+	 protected String bmiCategory;
 	 protected String message;
 	 protected Map<?, ?> data;
 
