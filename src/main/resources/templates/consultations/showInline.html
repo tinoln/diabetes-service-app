@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
+    <head id="head">
+
+    <title data-th-text="|#{label_show_entity(#{label_consultation})}|">Show Consultation - Spring Roo application</title>
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-th-fragment="inline-content" data-layout-fragment="content" data-th-object="${consultation}">
+        <div>
+
+          <!-- CONTENT -->
+            <div id="mainEntityFieldSet">
+              <ul class="list-unstyled" id="containerFields">
+                  <li id="consultation-patient-field" data-z="6c6ea1aa">
+            	      <strong data-th-text="#{label_consultation_patient}">patient</strong>
+                    <span data-th-text="*{{patient}}">patientValue</span>
+         	        </li>
+                  <li id="consultation-consultationdate-field" data-z="15d50414">
+            	      <strong data-th-text="#{label_consultation_consultationdate}">consultationDate</strong>
+                    <span data-th-text="*{{consultationDate}}">consultationDateValue</span>
+         	        </li>
+                  <li id="consultation-pregnancies-field" data-z="a2f81b6a">
+            	      <strong data-th-text="#{label_consultation_pregnancies}">pregnancies</strong>
+                    <span data-th-text="*{{pregnancies}}">pregnanciesValue</span>
+         	        </li>
+                  <li id="consultation-glucose-field" data-z="784aa88a">
+            	      <strong data-th-text="#{label_consultation_glucose}">glucose</strong>
+                    <span data-th-text="*{{glucose}}">glucoseValue</span>
+         	        </li>
+                  <li id="consultation-bloodpressure-field" data-z="a08c224a">
+            	      <strong data-th-text="#{label_consultation_bloodpressure}">bloodPressure</strong>
+                    <span data-th-text="*{{bloodPressure}}">bloodPressureValue</span>
+         	        </li>
+                  <li id="consultation-skinthickness-field" data-z="cb3fc30a">
+            	      <strong data-th-text="#{label_consultation_skinthickness}">skinThickness</strong>
+                    <span data-th-text="*{{skinThickness}}">skinThicknessValue</span>
+         	        </li>
+                  <li id="consultation-insulin-field" data-z="5c73390a">
+            	      <strong data-th-text="#{label_consultation_insulin}">insulin</strong>
+                    <span data-th-text="*{{insulin}}">insulinValue</span>
+         	        </li>
+                  <li id="consultation-bmi-field" data-z="d0de40a">
+            	      <strong data-th-text="#{label_consultation_bmi}">bmi</strong>
+                    <span data-th-text="*{{bmi}}">bmiValue</span>
+         	        </li>
+                  <li id="consultation-diabetespedigreefunction-field" data-z="1cd68a14">
+            	      <strong data-th-text="#{label_consultation_diabetespedigreefunction}">diabetesPedigreeFunction</strong>
+                    <span data-th-text="*{{diabetesPedigreeFunction}}">diabetesPedigreeFunctionValue</span>
+         	        </li>
+                  <li id="consultation-age-field" data-z="cfc77ea">
+            	      <strong data-th-text="#{label_consultation_age}">age</strong>
+                    <span data-th-text="*{{age}}">ageValue</span>
+         	        </li>
+                  <li id="consultation-prediction-field" data-z="790e58b4">
+            	      <strong data-th-text="#{label_consultation_prediction}">prediction</strong>
+                    <span data-th-text="*{{prediction}}">predictionValue</span>
+         	        </li>
+              </ul>
+            </div>
+
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  <!-- /CONTAINER -->
+
+  <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+  </div>
+
+  </body>
+
+</html>

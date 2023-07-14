@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
+  <head id="head">
+
+    <title data-th-text="|#{label_show_entity(#{label_patient})}|">Show Patient - Spring Roo application</title>
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container bg-container">
+      <section data-layout-fragment="content" data-th-object="${patient}">
+        <div class="container-fluid content">
+
+          <!-- CONTENT -->
+          <h1 data-th-text="#{label_show_entity(#{label_patient})}">Show Patient</h1>
+
+            <div id="mainEntityFieldSet">
+              <h2 data-th-text="#{label_data_entity(#{label_patient})}">Patient data</h2>
+              <ul class="list-unstyled" id="containerFields">
+                  <li id="patient-firstname-field" data-z="96fbc5c4">
+            	      <strong data-th-text="#{label_patient_firstname}">firstName</strong>
+                    <span data-th-text="*{{firstName}}">firstNameValue</span>
+         	        </li>
+                  <li id="patient-lastname-field" data-z="b8ba571a">
+            	      <strong data-th-text="#{label_patient_lastname}">lastName</strong>
+                    <span data-th-text="*{{lastName}}">lastNameValue</span>
+         	        </li>
+              </ul>
+            </div>
+
+
+          <div class="clearfix">
+            <div class="pull-right">
+             <a id="Patient_edit" href="edit.html" class="btn btn-primary" data-th-title="#{label_goEdit}" data-th-href="${@linkBuilder.of('PatientsItemThymeleafController').to('editForm').with('patient', patient.id)}" data-th-text="#{label_edit}">Edit</a>
+            </div>
+          </div>
+
+
+          <div class="clearfix">
+            <div class="pull-left">
+              <a id="Patient_list" href="list.html" class="btn btn-default" data-th-title="#{label_goBack}" data-th-href="${@linkBuilder.of('PatientsCollectionThymeleafController').to('list')}">
+  	             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  	             <span data-th-text="#{label_back}">Back</span>
+  	          </a>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  </body>
+
+</html>

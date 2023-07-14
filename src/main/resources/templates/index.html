@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/home-layout}">
+    <head id="head">
+
+    <title data-th-text="#{welcome_label}">Diabetes</title>
+
+  </head>
+
+  <body class="home" id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+      <!-- CONTAINER -->
+      <div class="container bg-container">
+
+        <section data-layout-fragment="content">
+          <div class="container-fluid content">
+
+            <div class="box-center">
+              <!-- Project info -->
+              <div class="row" >
+                <div class="hidden-xs col-sm-4 col-sm-offset-1 align-middle">
+                   <img alt="Spring Roo" data-th-src="@{/public/img/doctor.jpg}" src="../static/public/img/doctor.jpg" />
+                </div>
+                <div class="col-sm-6">
+                  <h2 data-th-text="#{info_homepage_header}">Welcome!</h2>
+                  <p data-th-text="#{info_homepage_paragraph}">This application is a spring implementation of a diabetes testing application.
+                  </p>
+                  <p class="lead" data-th-text="#{info_homepage_thanks}">Diabetes Test - Smarter Healthcare</p>
+                </div>
+              </div>
+            </div><!-- box-center -->
+
+            <!-- Features -->
+            <div class="row blocks">
+
+              <!-- Project page -->
+              <div class="col-sm-6 col-md-3">
+                <div class="block-item bgm-red">
+                  <div class="clearfix">
+                    <div class="doc">
+                      <img data-th-src="@{/public/img/hpemlops-300x276.jpg}" src="../static/public/img/hpemlops-300x276.jpg" width=60px/>
+                    </div>
+                    <div class="text">
+                      <h2><a href="https://www.hpe.com/us/en/solutions/machine-learning-operations.html" data-th-title="#{label_spring_site}" title="Spring Roo project site" target="_blank" data-th-text="#{label_projectpage}">Project Page</a></h2>
+                      <small data-th-text="#{info_spring_site}">All the info about Spring Roo development.</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Doc -->
+              <div class="col-sm-6 col-md-3">
+                <div class="block-item bgm-teal">
+                  <div class="clearfix">
+                    <div class="doc">
+                      <i class="fa fa-book"></i>
+                    </div>
+                    <div class="text">
+                      <h2><a href="http://docs.spring.io/spring-roo/docs/current/reference/html/" data-th-title="#{label_spring_documentation}" title="Spring Roo reference documentation" target="_blank" data-th-text="#{label_documentation}">Doc</a></h2>
+                      <small data-th-text="#{info_spring_documentation}">If you are looking for Reference Documentation you can get it here.</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+  </body>
+
+</html>

@@ -1,0 +1,24 @@
+<!--TABLE-->
+<div class="table-responsive" id="containerFields" data-th-fragment="consultation-entityModalConfirmBody" data-th-with="collectionLink=${@linkBuilder.of('ConsultationsCollectionThymeleafController')},itemLink=${@linkBuilder.of('ConsultationsItemThymeleafController')}">
+    <table id="consultation-entity-table-item-to-remove" data-data-load-url="${collectionLink.to('datatablesByIdsIn')}">
+      <thead>
+        <tr>
+          <th data-data="patient" data-th-text="#{label_consultation_patient}">patient</th>
+          <th data-data="consultationDate" data-th-text="#{label_consultation_consultationdate}">consultationDate</th>
+          <th data-data="pregnancies" data-th-text="#{label_consultation_pregnancies}">pregnancies</th>
+          <th data-data="glucose" data-th-text="#{label_consultation_glucose}">glucose</th>
+          <th data-data="bloodPressure" data-th-text="#{label_consultation_bloodpressure}">bloodPressure</th>
+        </tr>
+      </thead>
+      <tbody data-th-remove="all">
+        <tr>
+          <td>patient</td>
+          <td>consultationDate</td>
+          <td>pregnancies</td>
+          <td>glucose</td>
+          <td>bloodPressure</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+<!-- /TABLE -->
